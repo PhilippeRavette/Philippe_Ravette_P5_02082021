@@ -1,27 +1,14 @@
 const url = "http://localhost:3000/api/teddies";
 
-// A $( document ).ready() block.
-$(document).ready(function() {
-    console.log("ready!");
-    var Product = getProducts();
-});
+//fetch de l'URL
+fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+        addCards(data);
+    })
+    .catch((erreur) => console.log("erreur : " + erreur));
 
-function getProducts() {
-    fetch(url)
-        .then(function(res) {
-            if (res.ok) {
-                return res.json();
-            }
-        })
-        .then((data) => {
-            addCards(data);
-        })
-        .catch(function(err) {
-            // Une erreur est survenue
-        });
-}
-
-//création de la class produit
+// création de la class produit
 class Product {
     constructor(id, name, description, price, option, quantity, imgurl) {
         this.id = id;
@@ -33,6 +20,18 @@ class Product {
         this.imgurl = imgurl;
     }
 }
+
+// convertir le prix
+function convertPrice(productPrice) {
+    let price = `${productPrice}`;
+    price = Intl.NumberFormat("fr-FR", {
+        style: "currency",
+        currency: "EUR",
+        minimumFractionDigits: 2,
+    }).format(price / 100);
+    return price;
+}
+
 // fonction pour la création des cards de la page d'accueil
 function addCards(data) {
     //boucle pour chaque iteration d'un produit
@@ -40,7 +39,7 @@ function addCards(data) {
         //recupère l'élément liste dans le HTML
         const card = document.getElementById("liste");
         //convertit le prix
-        //const price = convertPrice(produit.price);//
+        const price = convertPrice(Product.price);
         card.innerHTML += `
       <div class="col-sm-12 col-md-6 col-lg-6 pb-3  ">
           <div class="card border bg-light shadow p-3 mb-5 bg-body rounded">
