@@ -35,7 +35,43 @@
     </header>
     <main>
         <section>
-
+            <div class="card px-0 mx-3 my-4 border-0">
+                <div class="row g-0 shadow p-3 bg-secondary rounded" id="product">
+                    <div class="col-md-7" id="productImage">
+                        <!-- Insertion de l'image -->
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6 col-sm-7 mt-3" id="productName">
+                                    <!-- Insertion du nom du produit -->
+                                </div>
+                                <div class="col-6 col-sm-5 text-end mt-3" id="productPrice">
+                                    <!-- Insertion du prix du produit -->
+                                </div>
+                            </div>
+                            <select id="option" class="form-select mb-3" aria-label="choisir la couleur">
+                            </select>
+                            <div class="mb-3" id="productDescription">
+                                <!-- Insertion de la description du produit -->
+                            </div>
+                            <div class="row">
+                                <div class="col-5 col-sm-3 col-md-5 col-lg-4 col-xl-3 my-auto text-white">
+                                    <p>Quantité :</p>
+                                </div>
+                                <div class="col-4 col-sm-3 col-md-4 col-lg-3 ">
+                                    <select id="quantity" class="form-select mb-3" aria-label="Quantité">
+                                        <option selected value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button id="btnAddBasket" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Ajouter au panier</button>
+                        </div>
+                    </div>
         </section>
 
     </main>
