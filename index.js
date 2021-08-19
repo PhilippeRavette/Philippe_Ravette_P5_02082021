@@ -1,7 +1,15 @@
-const url = "http://localhost:3000/api/teddies";
 //A $(document).ready()block.
 $(document).ready(function() { console.log("ready!") });
 
+function convertPrice(productPrice) {
+    let price = `${produit.price}`;
+    price = Intl.NumberFormat("fr-FR", {
+        style: "currency",
+        currency: "EUR",
+        minimumFractionDigits: 2,
+    }).format(price / 100);
+    return price;
+}
 //fetch de l'URL
 fetch(url)
     .then((response) => response.json())
@@ -18,6 +26,7 @@ function addCards(data) {
         //recupère l'élément liste dans le HTML
         const card = document.getElementById("liste");
         //convertit le prix
+
         const price = convertPrice(Product.price);
         card.innerHTML += `
       <div class="col-sm-12 col-md-6 col-lg-6 pb-3 d-flex"> 
