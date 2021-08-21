@@ -56,7 +56,7 @@ function displayProductListTable(product) {
 //affiche le totalBasket
 function totalPrice() {
     const totalPrice = document.getElementById("totalPrice");
-    totalPrice.innerHTML += `${convertPrice(displayTotalBasket())}`;
+    totalPrice.innerHTML = `${convertPrice(displayTotalBasket())}`;
 }
 
 // calcul du basketPreview

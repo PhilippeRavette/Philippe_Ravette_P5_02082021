@@ -4,7 +4,7 @@ basketPreview();
 
 // convertir le prix
 function convertPrice(productPrice) {
-    let price = `${product.price}`;
+    let price = productPrice;
     price = Intl.NumberFormat("fr-FR", {
         style: "currency",
         currency: "EUR",
@@ -55,8 +55,8 @@ if (basket.length < 1) {
         basket[index].quantity++;
 
         localStorage.setItem("teddies", JSON.stringify(basket));
-
-        location.reload();
+        totalPrice();
+        // location.reload();
 
     }
 
@@ -90,8 +90,8 @@ if (basket.length < 1) {
 
         localStorage.setItem("teddies", JSON.stringify(basket));
 
-        location.reload();
-
+        // location.reload();
+        totalPrice();
     }
 
 

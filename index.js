@@ -1,6 +1,10 @@
 //A $(document).ready()block.
 $(document).ready(function() { console.log("ready!") });
 
+//Mise à jour du basketPreview
+
+basketPreview();
+
 function convertPrice(productPrice) {
     let price = `${produit.price}`;
     price = Intl.NumberFormat("fr-FR", {
@@ -44,7 +48,7 @@ function addCards(data) {
                       </div>
                  </div>
                   
-                  <a href="./produit.html?_id=${produit._id}" class="btn btn-success my-2 d-flex justify-content-center fs-4">Acheter ce produit</a>
+                  <a href="./produit.html?_id=${produit._id}" class="btn btn-success my-2 d-flex justify-content-center fs-4">Voir ce produit</a>
               </div>
           </div>
       </div>`;

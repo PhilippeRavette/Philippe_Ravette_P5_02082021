@@ -1,3 +1,7 @@
+//Mise à jour du basketPreview
+
+basketPreview();
+
 // récupération de l'id du produit
 
 const searchParams = new URLSearchParams(location.search);
@@ -6,7 +10,7 @@ const newId = searchParams.get("_id");
 
 // convertir le prix
 function convertPrice(productPrice) {
-    let price = `${product.price}`;
+    let price = productPrice;
     price = Intl.NumberFormat("fr-FR", {
         style: "currency",
         currency: "EUR",
