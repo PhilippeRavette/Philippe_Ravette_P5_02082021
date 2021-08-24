@@ -56,7 +56,8 @@ if (basket.length < 1) {
 
         localStorage.setItem("teddies", JSON.stringify(basket));
         totalPrice();
-        // location.reload();
+        window.location.href = "panier.html"
+            // location.reload();
 
     }
 
@@ -89,9 +90,10 @@ if (basket.length < 1) {
         }
 
         localStorage.setItem("teddies", JSON.stringify(basket));
-
-        // location.reload();
         totalPrice();
+        window.location.href = "panier.html"
+            // location.reload();
+
     }
 
 

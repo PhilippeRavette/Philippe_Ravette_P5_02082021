@@ -1,3 +1,14 @@
+// convertir le prix
+function convertPrice(productPrice) {
+    let price = productPrice;
+    price = Intl.NumberFormat("fr-FR", {
+        style: "currency",
+        currency: "EUR",
+        minimumFractionDigits: 2,
+    }).format(price / 100);
+    return price;
+}
+
 const order = JSON.parse(localStorage.getItem("order")) || [];
 const date = JSON.parse(localStorage.getItem("date")) || [];
 
@@ -12,7 +23,7 @@ informations.innerHTML += `
     <div class=" fs-5 text-center fw-bold">
         <p class="text-capitalize">${order.contact.firstName} ${order.contact.lastName}</p>
         <p class="text-capitalize">${order.contact.address}</p>
-        <p class="text-capitalize">${order.contact.city}</p>
+        <p class="text-capitalize">${order.contact.code} ${order.contact.city}</p>       
     </div>
     `;
 
@@ -36,12 +47,12 @@ print.addEventListener("click", (e) => {
 });
 
 //vide le localStorage
-const clickHome = document.getElementById("accueil");
-clickHome.addEventListener("click", () => {
+const clickBasket = document.getElementById("basketPreview");
+clickBasket.addEventListener("click", () => {
     clearBasket();
 });
 
-const clickBasket = document.getElementById("basketPreview");
-clickBasket.addEventListener("click", () => {
+const clickHome = document.getElementById("home");
+clickHome.addEventListener("click", () => {
     clearBasket();
 });
