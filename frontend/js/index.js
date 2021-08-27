@@ -35,9 +35,9 @@ function addCards(data) {
           <div class="card border bg-secondary shadow p-3 mb-5 rounded">
               <div class="card-body"> 
                   <div class="row">
-                    <div class="img-contain">
-                      <a href="produit.html?_id=${produit._id}"><img src="${produit.imageUrl} "class="img-fluid img-thumbnail bg-black p-1" style="--bs-bg-opacity: .50;" alt="${produit.name}"></a>
-                    </div> 
+                      <div class="img-contain">
+                           <a href="produit.html?_id=${produit._id}"><img src="${produit.imageUrl}" class="img-fluid img-thumbnail bg-black p-1" style="--bs-bg-opacity: .50;" alt="${produit.name}"></a>
+                      </div> 
                       <div class="col-6 col-sm-7 mt-3" >
                           <h3 class="card-title text-white">${produit.name}</h3>
                       </div>

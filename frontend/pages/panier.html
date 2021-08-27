@@ -69,7 +69,7 @@
 
             <div class="d-none" id="basket">
 
-                <p class="text-center fs-4 text-light bg-secondary basket">Contenu du panier</p>
+                <h2 class="text-center fs-4 text-light bg-secondary basket">Contenu du panier</h2>
 
                 <div class="table-responsive">
 
@@ -79,17 +79,17 @@
 
                             <tr class="text-center fs-5">
 
-                                <th scole="col">Produit</th>
+                                <th scope="col">Produit</th>
 
-                                <th scole="col">Nom</th>
+                                <th scope="col">Nom</th>
 
-                                <th scole="col">Option</th>
+                                <th scope="col">Option</th>
 
-                                <th scole="col">Quantité</th>
+                                <th scope="col">Quantité</th>
 
-                                <th scole="col">Prix</th>
+                                <th scope="col">Prix</th>
 
-                                <th scole="col" class="bg-light">Prix total</th>
+                                <th scope="col" class="bg-light">Prix total</th>
 
                             </tr>
 
@@ -153,7 +153,7 @@
 
                 <div class="col-md-4">
 
-                    <label for="validationDefault01" class="form-label">Prénom</label>
+                    <label for="firstName" class="form-label">Prénom</label>
 
                     <input type="text" class="form-control" id="firstName" placeholder="Ex: 'Pierre'" pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
 
@@ -161,7 +161,7 @@
 
                 <div class="col-md-4">
 
-                    <label for="validationDefault02" class="form-label">Nom</label>
+                    <label for="lastName" class="form-label">Nom</label>
 
                     <input type="text" class="form-control" id="lastName" placeholder="Ex: 'Dupont'" pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
 
@@ -169,7 +169,7 @@
 
                 <div class="col-md-4">
 
-                    <label for="validationDefaultUsername" class="form-label">Email</label>
+                    <label for="email" class="form-label">Email</label>
 
                     <div class="input-group has-validation">
 
@@ -183,7 +183,7 @@
 
                 <div class="col-md-6">
 
-                    <label for="validationDefault03" class="form-label">Adresse</label>
+                    <label for="address" class="form-label">Adresse</label>
 
                     <input type="text" class="form-control" id="address" placeholder="Ex: '3 rue de paris'" pattern="^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$" required>
 
@@ -191,7 +191,7 @@
 
                 <div class="col-md-3">
 
-                    <label for="validationDefault04" class="form-label">Code postal</label>
+                    <label for="code" class="form-label">Code postal</label>
 
                     <input type="text" class="form-control" id="code" placeholder="Ex: '75000'" pattern="^(([0-8][0-9])|(9[0-5])|(2[ab]))[0-9]{3}$" required>
 
@@ -199,7 +199,7 @@
 
                 <div class="col-md-3">
 
-                    <label for="validationDefault05" class="form-label">Ville</label>
+                    <label for="city" class="form-label">Ville</label>
 
                     <input type="text" class="form-control" id="city" placeholder="Ex: 'Paris'" pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$" required>
 
@@ -213,8 +213,8 @@
 
                         <label class="form-check-label" for="invalidCheck2">
     
-                         <p data-bs-toggle="tooltip" data-bs-placement="top" title="Termes et conditions de vente : Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum consequatur quos quis, asperiores nostrum cupiditate consequuntur earum quae saepe distinctio!"> Accepter les termes et conditions de vente</p>
-    
+                        Accepter les termes et conditions de vente
+                          
                         </label>
 
                     </div>
