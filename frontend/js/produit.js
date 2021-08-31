@@ -1,5 +1,4 @@
 //Mise à jour du basketPreview
-
 basketPreview();
 
 // récupération de l'id du produit

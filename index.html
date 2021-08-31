@@ -1,1 +1,83 @@
-<meta http-equiv="refresh" content="1; url=frontend/pages/index.html">
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Orinoco vous propose une sélection unique d'ours en peluche">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="frontend/css/index.css">
+    <script src="https://kit.fontawesome.com/8266bb2335.js" crossorigin="anonymous" defer></script>
+    <link rel="icon" href="https://img.icons8.com/fluency/48/000000/home.png" />
+    <title>ORINOURS</title>
+</head>
+
+<body>
+
+    <div class="loader-spinner fa-10x">
+        <i class="fas fa-paw fa-rotate-spinner"></i>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid mx-2 mx-lg-5">
+                <img class="img-fluid mx-4 mx-lg-0 mr-auto w-50" src="frontend/images/logo_orinoco.jpg" alt="orinoco - le site unique pour vos ours en peluches" />
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ms-4" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold" aria-current="page" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="frontend/pages/panier.html" id="basketPreview">Panier</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="p-3 mx-5 mt-4 rounded bg-secondary">
+            <div class="jumbotron p-1 p-lg-5" style="background-image: url(https://thumbs.dreamstime.com/b/ours-de-nounours-tenant-le-ballon-en-forme-coeur-105038510.jpg); background-size: 100% 100%;">
+                <h1 class="text-center fs-1 text-light font-weight-bold">Bienvenue sur ORINOURS</h1>
+                <p class="text-center fs-3 text-light font-weight-bold">Un site unique de mignons petits ours cousus à la main.</p>
+            </div>
+        </div>
+        <section class="products-container mx-3">
+            <h2 class="title text-center mt-3">Nos produits</h2>
+            <div class="row mx-3 my-4" id="liste">
+
+            </div>
+        </section>
+
+    </main>
+    <footer class="bg-light py-4">
+        <ul class="list-inline text-center">
+            <li class="list-inline-item"><a href="https://facebook.com" aria-label="facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
+            <li class="list-inline-item"><a href="https://twitter.com" aria-label="twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
+            <li class="list-inline-item"><a href="https://instagram.com" aria-label="instagram"><i class="fa fa-instagram fa-2x"></i></a></li>
+            <li class="list-inline-item"><a href="https://pinterest.com" aria-label="pinterest"><i class="fa fa-pinterest fa-2x"></i></a></li>
+        </ul>
+
+        <ul class="list-inline text-center">
+            <li class="list-inline-item"><a href="index.html" title="Accueil" class="text-dark fw-bold">Accueil</a></li>
+            <li class="list-inline-item"><a href="mailto:orinoco@mail.com?subject=Contact" title="Contact" class="text-dark fw-bold">Contact</a>
+            </li>
+            <li class="list-inline-item"><a href="#" title="Mentions Légales" class="text-dark fw-bold">Mentions Légales</a></li>
+        </ul>
+        <p class="copyright text-center">Philippe Ravette © août 2021</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+    <script src="frontend/js/function.js" defer></script>
+    <script src="frontend/js/index.js" defer></script>
+
+
+</body>
+
+</html>

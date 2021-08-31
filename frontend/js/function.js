@@ -24,7 +24,7 @@ function displayTotalBasket() {
     return totalBasket;
 }
 
-//ajoute le tableau de commande
+//ajoute le tableau de commande 
 function displayProductListTable(product) {
     const indexProduct = basket.indexOf(product);
     const productList = document.getElementById("productsBasket");

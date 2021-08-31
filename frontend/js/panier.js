@@ -36,7 +36,7 @@ if (basket.length < 1) {
         basket[index].quantity++;
         localStorage.setItem("teddies", JSON.stringify(basket));
         totalPrice();
-        window.location.href = "panier.html"
+        window.location.href = "../pages/panier.html"
             // location.reload();
     }
     const buttonAdd = document.getElementsByClassName("plus");
@@ -55,7 +55,7 @@ if (basket.length < 1) {
         }
         localStorage.setItem("teddies", JSON.stringify(basket));
         totalPrice();
-        window.location.href = "panier.html"
+        window.location.href = "../pages/panier.html"
             // location.reload();
     }
     const buttonMinus = document.getElementsByClassName("minus");
@@ -160,7 +160,7 @@ if (basket.length < 1) {
                 .then((response) => response.json())
                 .then((data) => {
                     localStorage.setItem("order", JSON.stringify(data));
-                    document.location.href = "order.html";
+                    document.location.href = "../pages/order.html";
                 })
                 .catch((erreur) => console.log("erreur : " + erreur));
 

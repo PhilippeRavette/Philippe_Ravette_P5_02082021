@@ -36,7 +36,7 @@ function addCards(data) {
               <div class="card-body"> 
                   <div class="row">
                       <div class="img-contain">
-                           <a href="produit.html?_id=${produit._id}"><img src="${produit.imageUrl}" class="img-fluid img-thumbnail bg-black p-1" style="--bs-bg-opacity: .50;" alt="${produit.name}"></a>
+                           <a href="frontend/pages/produit.html?_id=${produit._id}"><img src="${produit.imageUrl}" class="img-fluid img-thumbnail bg-black p-1" style="--bs-bg-opacity: .50;" alt="${produit.name}"></a>
                       </div> 
                       <div class="col-6 col-sm-7 mt-3" >
                           <h3 class="card-title text-white">${produit.name}</h3>
@@ -46,7 +46,7 @@ function addCards(data) {
                       </div>
                  </div>
                   
-                  <a href="produit.html?_id=${produit._id}" class="btn btn-success my-2 d-flex justify-content-center fs-4">Voir ce produit</a>
+                  <a href="frontend/pages/produit.html?_id=${produit._id}" class="btn btn-success my-2 d-flex justify-content-center fs-4">Voir ce produit</a>
               </div>
           </div>
       </div>`;
