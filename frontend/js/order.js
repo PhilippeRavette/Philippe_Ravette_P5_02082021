@@ -13,7 +13,7 @@ const order = JSON.parse(localStorage.getItem("order")) || [];
 const date = JSON.parse(localStorage.getItem("date")) || [];
 
 // affiche Mes informations
-const informations = document.getElementById("contact");
+var informations = document.getElementById("contact");
 informations.innerHTML += `
     <p class="fs-5"><span class="fw-bold text-capitalize">${order.contact.firstName}</span>, merci pour votre achat sur notre site !</p>
     <p class="fs-5"> Votre commande passée le <span class="fw-bold">${date[0].date}</span> à <span class="fw-bold">${date[0].hours}</span> d'un montant total de <span class="fw-bold">${convertPrice(displayTotalBasket())}</span> a été validée.</p>
@@ -31,7 +31,7 @@ informations.innerHTML += `
 for (product of basket) {
     displayProductListTable(product);
 }
-const deletedItem = document.getElementsByClassName("rounded");
+var deletedItem = document.getElementsByClassName("rounded");
 for (element of deletedItem) {
     element.classList.add("d-none");
 }
@@ -40,19 +40,19 @@ for (element of deletedItem) {
 totalPrice();
 
 //bouton imprimer
-const print = document.getElementById("print");
+var print = document.getElementById("print");
 print.addEventListener("click", (e) => {
     e.preventDefault;
     window.print();
 });
 
 //vide le localStorage
-const clickBasket = document.getElementById("basketPreview");
+var clickBasket = document.getElementById("basketPreview");
 clickBasket.addEventListener("click", () => {
     clearBasket();
 });
 
-const clickHome = document.getElementById("home");
+var clickHome = document.getElementById("home");
 clickHome.addEventListener("click", () => {
     clearBasket();
 });

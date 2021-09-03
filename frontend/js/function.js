@@ -26,8 +26,8 @@ function displayTotalBasket() {
 
 //ajoute le tableau de commande 
 function displayProductListTable(product) {
-    const indexProduct = basket.indexOf(product);
-    const productList = document.getElementById("productsBasket");
+    var indexProduct = basket.indexOf(product);
+    var productList = document.getElementById("productsBasket");
     productList.innerHTML += `
     <tr class="text-center">
         <td class="w-25">
@@ -55,7 +55,7 @@ function displayProductListTable(product) {
 
 //affiche le totalBasket
 function totalPrice() {
-    const totalPrice = document.getElementById("totalPrice");
+    var totalPrice = document.getElementById("totalPrice");
     totalPrice.innerHTML = `${convertPrice(displayTotalBasket())}`;
 }
 

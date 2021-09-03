@@ -13,8 +13,8 @@ function convertPrice(productPrice) {
     return price;
 }
 
-const orderForm = document.getElementById("orderForm");
-const emptyBasket = document.getElementById("emptyBasket");
+var orderForm = document.getElementById("orderForm");
+var emptyBasket = document.getElementById("emptyBasket");
 
 // indique que le panier est vide
 if (basket.length < 1) {
@@ -24,7 +24,7 @@ if (basket.length < 1) {
 } else {
     orderForm.classList.add("d-none");
     emptyBasket.classList.add("d-none");
-    const fullBasket = document.getElementById("basket");
+    var fullBasket = document.getElementById("basket");
     fullBasket.classList.toggle("d-none");
     for (product of basket) {
         displayProductListTable(product);
@@ -32,14 +32,14 @@ if (basket.length < 1) {
 
     // ajouter produit
     function addProduct(event) {
-        const index = event.target.getAttribute("data-index");
+        var index = event.target.getAttribute("data-index");
         basket[index].quantity++;
         localStorage.setItem("teddies", JSON.stringify(basket));
         totalPrice();
         window.location.href = "../pages/panier.html"
             // location.reload();
     }
-    const buttonAdd = document.getElementsByClassName("plus");
+    var buttonAdd = document.getElementsByClassName("plus");
     for (add of buttonAdd) {
         add.addEventListener("click", addProduct);
     }
@@ -47,7 +47,7 @@ if (basket.length < 1) {
     //supprimer un produit
 
     function minusProduct(event) {
-        const index = event.target.getAttribute("data-index");
+        var index = event.target.getAttribute("data-index");
         if (basket[index].quantity > 1) {
             basket[index].quantity--;
         } else {
@@ -58,7 +58,7 @@ if (basket.length < 1) {
         window.location.href = "../pages/panier.html"
             // location.reload();
     }
-    const buttonMinus = document.getElementsByClassName("minus");
+    var buttonMinus = document.getElementsByClassName("minus");
     for (minus of buttonMinus) {
         minus.addEventListener("click", minusProduct);
     }
@@ -67,15 +67,15 @@ if (basket.length < 1) {
     totalPrice();
 
     //affiche le formulaire et cache les boutons valider/supprimer panier
-    const validationBasket = document.getElementById("validationBasket");
-    const cacheButton = document.getElementById("cacheButton");
+    var validationBasket = document.getElementById("validationBasket");
+    var cacheButton = document.getElementById("cacheButton");
     validationBasket.addEventListener("click", () => {
         orderForm.classList.toggle("d-none");
         cacheButton.classList.add("d-none");
     });
 
     //vide le panier
-    const buttonClearBASKET = document.getElementById("clearBasket");
+    var buttonClearBASKET = document.getElementById("clearBasket");
     buttonClearBASKET.addEventListener("click", () => {
         clearBasket();
         location.reload();
@@ -84,13 +84,13 @@ if (basket.length < 1) {
 
 
     //validation du formulaire et envoie en POST
-    const order = document.getElementById("order");
-    const regexName = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$/;
-    const regexCity = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$/;
-    const regexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/;
-    const regexAddress = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$/;
-    const regexcode = /^(([0-8][0-9])|(9[0-5])|(2[ab]))[0-9]{3}$/;
-    const checkBox = document.getElementById("invalidCheck2");
+    var order = document.getElementById("order");
+    var regexName = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$/;
+    var regexCity = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$/;
+    var regexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/;
+    var regexAddress = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$/;
+    var regexcode = /^(([0-8][0-9])|(9[0-5])|(2[ab]))[0-9]{3}$/;
+    var checkBox = document.getElementById("invalidCheck2");
     order.addEventListener("click", (event) => {
 
         // on prépare les infos pour l'envoie en POST
@@ -116,7 +116,7 @@ if (basket.length < 1) {
             event.preventDefault();
 
             // on stocke l'heure et la date de la commande
-            const todayDate = new Date();
+            var todayDate = new Date();
             let nowadays = todayDate.getDate();
             let month = todayDate.getMonth() + 1;
             let todayHours = todayDate.getHours();
@@ -137,10 +137,10 @@ if (basket.length < 1) {
                 todayMinutes = "0" + todayMinutes;
             }
 
-            const date = nowadays + "-" + month + "-" + todayDate.getFullYear();
-            const hours = todayHours + ":" + todayMinutes;
-            const fullDate = { date, hours };
-            const infoOrder = JSON.parse(localStorage.getItem("date")) || [];
+            var date = nowadays + "-" + month + "-" + todayDate.getFullYear();
+            var hours = todayHours + ":" + todayMinutes;
+            var fullDate = { date, hours };
+            var infoOrder = JSON.parse(localStorage.getItem("date")) || [];
             infoOrder.push(fullDate);
             localStorage.setItem("date", JSON.stringify(infoOrder));
 

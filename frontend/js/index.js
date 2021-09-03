@@ -4,7 +4,7 @@ $(document).ready(function() { console.log("ready!") });
 //Mise à jour du basketPreview
 basketPreview();
 
-function convertPrice(productPrice) {
+function convertPrice(_productPrice) {
     let price = `${produit.price}`;
     price = Intl.NumberFormat("fr-FR", {
         style: "currency",
@@ -13,6 +13,7 @@ function convertPrice(productPrice) {
     }).format(price / 100);
     return price;
 }
+
 //fetch de l'URL
 fetch(url)
     .then((response) => response.json())
@@ -21,15 +22,14 @@ fetch(url)
     })
     .catch((erreur) => console.log("erreur : " + erreur));
 
-
 // fonction pour la création des cards de la page d'accueil
 function addCards(data) {
     //boucle pour chacun d'un produit
     for (produit of data) {
         //recupère l'élément liste dans le HTML
-        const card = document.getElementById("liste");
+        var card = document.getElementById("liste");
         //convertit le prix
-        const price = convertPrice(Product.price);
+        var price = convertPrice(Product.price);
         card.innerHTML += `
       <div class="col-sm-12 col-md-6 col-lg-6 pb-3 d-flex"> 
           <div class="card border bg-secondary shadow p-3 mb-5 rounded">
