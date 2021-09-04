@@ -40,7 +40,7 @@ for (element of deletedItem) {
 totalPrice();
 
 //bouton imprimer
-var print = document.getElementById("print");
+const print = document.getElementById("print");
 print.addEventListener("click", (e) => {
     e.preventDefault;
     window.print();
