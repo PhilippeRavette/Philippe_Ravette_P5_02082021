@@ -1,7 +1,7 @@
 # Philippe_Ravette_P5_02082021
 Projet 5 du parcours Développeur web d'OpenClassrooms : Construire un site e-commerce
 
-Il s'agit d'un MVP (Produit Minimum Viable) d'une application thématique ne vendant qu'un seul type de produits (ici des appareils photos) ; la partie back-end est fournie et l'objectif est de créer la partie front-end par la consommation d'une API fournie. Aucune maquette n'est fournie, et aucune gestion réelle de transactions n'est effectuée.
+Il s'agit d'un MVP (Produit Minimum Viable) d'une application thématique ne vendant qu'un seul type de produits (ici des ours en peluches) ; la partie back-end est fournie et l'objectif est de créer la partie front-end par la consommation d'une API fournie. Aucune maquette n'est fournie, et aucune gestion réelle de transactions n'est effectuée.
 Compétences évaluées :
 
     Interagir avec un web service avec JavaScript
